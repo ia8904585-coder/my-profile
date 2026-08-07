@@ -75,7 +75,7 @@ font-size: 40px;
  .contact .text h3,
 .contact .text p,
 b{
-  background-image: linear-gradient(to right, #007bff,#4cc9f0) !important;
+  background-image: linear-gradient(to right, #007bff,#ffffff) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -288,7 +288,7 @@ display: flex;
 }
 nav h2{
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 nav ul{
