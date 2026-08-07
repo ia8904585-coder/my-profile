@@ -75,7 +75,7 @@ font-size: 40px;
  .contact .text h3,
 .contact .text p,
 b{
-  background-image: linear-gradient(to right, #007bff, #ffffff) !important;
+  background-image: linear-gradient(to right, #007bff,#4cc9f0) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -295,7 +295,7 @@ nav ul{
     display: flex;
     gap: 10px;
     list-style: none;
-    margin-left: 15px;
+    margin-left: 26px;
     
 }
 nav ul li a{
