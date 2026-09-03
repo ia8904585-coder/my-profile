@@ -3,21 +3,106 @@
     margin: 0;
 }
 body{
-    background: linear-gradient(135deg,#0f172a,#1e293b);
+    background: var(--main-color);
     background-attachment: fixed;
     background-repeat:no-repeat ;
     min-height: 100vh;
     color: #eee;
-    font-family: 'lnter',sans-serif;
+    font-family: system-ui;
     direction: ltr;
-    
 }
+
+
 html,body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background-color: #0f172a;
 }
+:root{
+--main-color:linear-gradient(135deg,#0f172a,#1e293b);
+--intro-texte:linear-gradient(to right, #007bff,#ffffff) ;
+--buton-t:#ffffff;
+--aduot-me:#38bdf8;
+--aduot-text:#cbd5e1;
+--adut-carde:#1e293b;
+--taitle-carde:#38bdf8;
+--project-cardetitl: #38bdf8;
+--pro-h3: #38bdf8;
+--pro-a: linear-gradient(135deg,#00c6ff,#0072ff);
+--pro-p: #eee;
+--bak-pro:#1e293b;
+--sp-n:#eee;
+--card-p:#94a3b8;
+}
+body.dark-mode{
+
+--main-color: linear-gradient(135deg, #eef2ff, #e0e7ff, #dbeafe);
+  --intro-texte: linear-gradient(to right, #0f172a, #1d4ed8);
+    --buton-t: #000000;
+    --aduot-me: #0369a1;
+    --aduot-text: #1e293b;
+    --adut-carde: #ffffff;
+    --taitle-carde: #0284c8;
+    --project-cardetitl: #0369a1;
+    --pro-h3: #0284c7;
+    --pro-a: linear-gradient(135deg, #0284c7, #1d4ed8);
+    --pro-p: #384c67;
+    --sp-n:#384c67;
+    --card-p: #384c67;
+}
+.ibkn{
+  
+}
+.sun,.moon{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+.sun img, .moon img{
+  background-color: transparent;
+  display: block;
+  width: 34px;
+  transition: all 0.4s ease;
+}
+.sun img{
+  filter: brightness(0) invert(1);
+  width: 34px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.moon img{
+  width: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) rotate(-180deg);
+}
+.dark-mode .sun img{
+  opacity: 0;
+  transform: scale(0) rotate(180deg);
+
+}
+.dark-mode .moon img{
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  pointer-events:auto;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -75,7 +160,7 @@ font-size: 40px;
  .contact .text h3,
 .contact .text p,
 b{
-  background-image: linear-gradient(to right, #007bff,#ffffff) !important;
+  background-image:var(--intro-texte)!important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -103,7 +188,7 @@ b{
     margin: 15px 10px;
     border-radius: 5px;
     padding: 10px;
-    color:#ffffff;
+    color:var(--buton-t);
     letter-spacing: 0.5px;
     font-weight: 500;
     
@@ -132,7 +217,7 @@ b{
 
 .section-title {
   font-size: 2rem;
-  color: #38bdf8;
+  color:var(--aduot-me);
   margin-bottom: 20px;
   border-bottom: 2px solid #38bdf8;
   display: inline-block;
@@ -142,7 +227,7 @@ b{
 .about-text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #cbd5e1;
+  color:var(--aduot-text);
   margin-bottom: 15px;
 }
 
@@ -154,7 +239,7 @@ b{
 }
 
 .card {
-  background-color: #1e293b;
+  background-color:var(--adut-carde);
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #334155;
@@ -168,13 +253,13 @@ b{
 }
 
 .card h3 {
-  color: #38bdf8;
+  color: var(--taitle-carde);
   font-size: 1.1rem;
   margin-bottom: 8px;
 }
 
 .card p {
-  color: #94a3b8;
+  color: var(--card-p);
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
@@ -195,12 +280,12 @@ html{
 .title{
   text-align: center;
   margin-bottom: 15px;
-  color: #38bdf8;
+  color: var(--project-cardetitl);
   font-size: 2rem;
 }
  .project-crad .card-projct{
   height: 100%;
-  color:#1e293b;
+  color:var(--bak-pro);
   border: 1px solid #334255;
   padding: 20px;
 
@@ -221,13 +306,13 @@ display: flex;
 
 }
 .project-crad .card-projct h3{
-  color: #38bdf8;
+  color: var(--pro-h3);
   padding: 8px;
   font-weight: 700;
 }
 .project-crad .card-projct a{
   text-decoration: none;
-  background-color:#007bff ;
+  background-color:var(--pro-a) ;
   border-radius: 8px;
   color: #eee;
   padding: 10px 16px;
@@ -239,11 +324,11 @@ display: flex;
   
 }
 .project-crad .card-projct p {
-  color: #eee;
+  color: var(--pro-p);
   font-weight: 700;
 }
 .project-crad .card-projct span{
-  color: #eee;
+  color:var(--sp-n);
   font-size:700 ;
 }
 .con{
@@ -271,6 +356,10 @@ display: flex;
   color: #94a3b8;
   font-size: 0.9rem;
   line-height: 1.6;
+}
+.mode {
+  display: flex;
+  
 }
 /* جعل التصميم متجاوباً مع الهواتف (Responsive) */
 @media (max-width: 768px) {
@@ -315,7 +404,7 @@ nav ul li a{
 .title{
   text-align: center;
   margin-bottom: 15px;
-  color: #38bdf8;
+  color: var(--project-cardetitl);
   font-size: 2rem;
 }
  .project-crad .card-projct{
@@ -333,6 +422,25 @@ display: flex;
   margin-top: auto;
   
 }
+.sun img{
+  filter: brightness(0) invert(1);
+  width: 27px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.moon img{
+  width: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) rotate(-180deg);
+}
 .project-crad .card-projct:hover{
 
   transform: translateY(-3px);
@@ -340,13 +448,13 @@ display: flex;
 
 }
 .project-crad .card-projct h3{
-  color: #38bdf8;
+  color: var(--pro-h3);
   padding: 8px;
   font-weight: 700;
 }
 .project-crad .card-projct a{
   text-decoration: none;
-  background-color:#007bff ;
+  background-color:var(--pro-a);
   border-radius: 8px;
   color: #eee;
   padding: 10px 16px;
@@ -359,12 +467,13 @@ display: flex;
   
 }
 .project-crad .card-projct p {
-  color: #eee;
+  color: var(--pro-p);
   font-weight: 700;
 }
 .project-crad .card-projct span{
-  color: #eee;
+  color: var(--sp-n);
   font-size:700 ;
 }
+
 }
 
